@@ -106,16 +106,54 @@ function App() {
 
         <section className="features-section">
           <div className="feature-card">
-            <h3>Games</h3>
-            <p>Create games with the world's leading real-time development platform.</p>
+            <div className="feature-video-container">
+              <video
+                className="feature-video"
+                muted
+                playsInline
+                autoPlay
+                loop
+              >
+                <source src="/videos/feature1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <h3>Unity</h3>
+            <p>Unity 및 C#을 활용하여 VR (META / VisionPro / Hololens2) 게임 및 전시를 제작하였으며, Unity Shader 및 다양한 Interactive Device를 통한 Interactive Art를 제작하였습니다.</p>
+            <button className="view-project-btn">프로젝트 보기</button>
           </div>
+
           <div className="feature-card">
-            <h3>Industry</h3>
-            <p>Drive innovation with real-time 3D development.</p>
+            <div className="feature-video-container">
+              <video
+                className="feature-video"
+                muted
+                playsInline
+                autoPlay
+                loop
+              >
+                <source src="/videos/feature2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <h3>Touch Designer - Unreal - AfterEffect</h3>
+            <p>Touch Designer 및 Unreal, AfterEffect 등 다양한 툴과 Interactive Device를 활용하여 Interactive Art를 제작하였습니다.</p>
+            <button className="view-project-btn">프로젝트 보기</button>
           </div>
+
           <div className="feature-card">
-            <h3>Education</h3>
-            <p>Empower the next generation of creators with Unity.</p>
+            <div className="feature-video-container">
+              <video
+                className="feature-video"
+                muted
+                playsInline
+                autoPlay
+                loop
+              >
+                <source src="/videos/feature3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <h3>Design</h3>
+            <p>패션 산업 디자인과를 전공하여 패션쇼를 개최하였고, 다양한 3D Tool과 3D Printer를 활용하여 Artwork를 제작하였습니다.</p>
+            <button className="view-project-btn">프로젝트 보기</button>
           </div>
         </section>
       </main>
