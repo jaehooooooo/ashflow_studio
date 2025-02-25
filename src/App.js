@@ -5,9 +5,9 @@ function App() {
   const [currentGif, setCurrentGif] = useState(0);
   
   const gifs = [
-    '/gifs/animation1.gif',
-    '/gifs/animation2.gif',
-    '/gifs/animation3.gif'
+    `${process.env.PUBLIC_URL}/gifs/animation1.gif`,
+    `${process.env.PUBLIC_URL}/gifs/animation2.gif`,
+    `${process.env.PUBLIC_URL}/gifs/animation3.gif`
   ];
 
   useEffect(() => {
@@ -22,7 +22,11 @@ function App() {
     <div className="App">
       <nav className="main-nav">
         <div className="nav-left">
-          <img src="/unity-logo.svg" alt="Unity" className="unity-logo" />
+          <img 
+            src={`${process.env.PUBLIC_URL}/unity-logo.svg`} 
+            alt="Unity" 
+            className="unity-logo" 
+          />
           <div className="nav-links">
             <a href="#products">제품</a>
             <a href="#solutions">솔루션</a>
