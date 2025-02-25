@@ -67,20 +67,22 @@
   overflow: hidden;
 }
 
-.gif-container {
+.video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
+  background: #000;
 }
 
-.hero-gif {
+.hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.6;
+  transition: opacity 1s ease-in-out;
 }
 
 .hero-content {

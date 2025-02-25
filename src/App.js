@@ -2,19 +2,19 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [currentGif, setCurrentGif] = useState(0);
+  const [currentVideo, setCurrentVideo] = useState(0);
   const [imageError, setImageError] = useState(false);
   
-  const gifs = [
-    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjM5YzFiMjY5M2Y4ZWM4NzQ4ZjJkZjM5ZmM5YzFiZTY3ZjI1ZjY0YiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/cYZC9WkfvhrrqYtJ6K/giphy.gif',  // 3D 게임 환경
-    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzM1ZWZhNmM0ZGE0ZjM5ZmNhMjU5ZjI1NzE1NjM4ZWJjYjM1ZjM4ZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/3o7TKSjRrfIPjeiVyM/giphy.gif',  // 3D 렌더링
-    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWJjNzE4ZmM3ZWM4ZjM5YjFkYzM4ZjQ5ZmM1ZjM5YjFkYzM4ZjQ5ZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/LwBuRPPXHfQkM/giphy.gif'   // 게임 개발
+  const videos = [
+    'https://static.videezy.com/system/resources/previews/000/038/626/original/alb_game001_1080p.mp4',  // 게임 개발 영상
+    'https://static.videezy.com/system/resources/previews/000/004/381/original/Plexus.mp4',  // 3D 그래픽 영상
+    'https://static.videezy.com/system/resources/previews/000/051/927/original/Abstract_Loop_08.mp4'  // 추상적 3D 영상
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentGif((prev) => (prev + 1) % gifs.length);
-    }, 7000);
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 8000); // 8초마다 전환
 
     return () => clearInterval(interval);
   }, []);
@@ -61,17 +61,17 @@ function App() {
               <button className="secondary-btn">Unity 살펴보기</button>
             </div>
           </div>
-          <div className="gif-container">
-            {!imageError ? (
-              <img 
-                src={gifs[currentGif]} 
-                alt="Unity showcase"
-                className="hero-gif"
-                onError={handleImageError}
-              />
-            ) : (
-              <div className="fallback-background" />
-            )}
+          <div className="video-container">
+            <video
+              key={videos[currentVideo]}
+              className="hero-video"
+              autoPlay
+              muted
+              playsInline
+              onEnded={() => setCurrentVideo((prev) => (prev + 1) % videos.length)}
+            >
+              <source src={videos[currentVideo]} type="video/mp4" />
+            </video>
           </div>
         </section>
 
