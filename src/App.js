@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [currentGif, setCurrentGif] = useState(0);
+  const [imageError, setImageError] = useState(false);
   
   const gifs = [
     `${process.env.PUBLIC_URL}/gifs/animation1.gif`,
@@ -18,15 +19,24 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleImageError = (e) => {
+    console.log('Image failed to load:', e.target.src);
+    setImageError(true);
+  };
+
   return (
     <div className="App">
       <nav className="main-nav">
         <div className="nav-left">
-          <img 
-            src={`${process.env.PUBLIC_URL}/unity-logo.svg`} 
-            alt="Unity" 
+          <svg 
             className="unity-logo" 
-          />
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 512 512"
+            width="32" 
+            height="32"
+          >
+            <path d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224S379.7 32 256 32zm128 224l-96 96-96-96 96-96 96 96z"/>
+          </svg>
           <div className="nav-links">
             <a href="#products">제품</a>
             <a href="#solutions">솔루션</a>
@@ -52,11 +62,16 @@ function App() {
             </div>
           </div>
           <div className="gif-container">
-            <img 
-              src={gifs[currentGif]} 
-              alt="Unity showcase"
-              className="hero-gif"
-            />
+            {!imageError ? (
+              <img 
+                src={gifs[currentGif]} 
+                alt="Unity showcase"
+                className="hero-gif"
+                onError={handleImageError}
+              />
+            ) : (
+              <div className="fallback-background" />
+            )}
           </div>
         </section>
 
