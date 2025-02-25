@@ -1,0 +1,8 @@
+{
+  "short_name": "Ashflow Studio",
+  "name": "Ashflow Studio - Media Art Developer Portfolio",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+} 
