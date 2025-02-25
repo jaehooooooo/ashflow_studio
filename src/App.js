@@ -6,15 +6,15 @@ function App() {
   const [imageError, setImageError] = useState(false);
   
   const gifs = [
-    `${process.env.PUBLIC_URL}/gifs/animation1.gif`,
-    `${process.env.PUBLIC_URL}/gifs/animation2.gif`,
-    `${process.env.PUBLIC_URL}/gifs/animation3.gif`
+    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjM5YzFiMjY5M2Y4ZWM4NzQ4ZjJkZjM5ZmM5YzFiZTY3ZjI1ZjY0YiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/cYZC9WkfvhrrqYtJ6K/giphy.gif',  // 3D 게임 환경
+    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzM1ZWZhNmM0ZGE0ZjM5ZmNhMjU5ZjI1NzE1NjM4ZWJjYjM1ZjM4ZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/3o7TKSjRrfIPjeiVyM/giphy.gif',  // 3D 렌더링
+    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWJjNzE4ZmM3ZWM4ZjM5YjFkYzM4ZjQ5ZmM1ZjM5YjFkYzM4ZjQ5ZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/LwBuRPPXHfQkM/giphy.gif'   // 게임 개발
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGif((prev) => (prev + 1) % gifs.length);
-    }, 5000); // 각 GIF를 5초간 보여줍니다. 필요에 따라 시간을 조절하세요
+    }, 7000);
 
     return () => clearInterval(interval);
   }, []);
