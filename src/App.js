@@ -55,11 +55,11 @@ function App() {
             <path d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224S379.7 32 256 32zm128 224l-96 96-96-96 96-96 96 96z"/>
           </svg>
           <div className="nav-links">
-            <a href="#products">제품</a>
-            <a href="#solutions">솔루션</a>
-            <a href="#services">서비스</a>
-            <a href="#resources">리소스</a>
-            <a href="#company">회사</a>
+            <a href="#about">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#archiving">Archiving</a>
+            <a href="#projects">Projects</a>
+            <a href="#career">Career</a>
           </div>
         </div>
         <div className="nav-right">
