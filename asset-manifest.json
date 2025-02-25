@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ashflow_studio/static/css/main.ab5053a3.css",
-    "main.js": "/ashflow_studio/static/js/main.619acea8.js",
+    "main.js": "/ashflow_studio/static/js/main.119dd51d.js",
     "static/js/453.8f712af2.chunk.js": "/ashflow_studio/static/js/453.8f712af2.chunk.js",
     "index.html": "/ashflow_studio/index.html",
     "main.ab5053a3.css.map": "/ashflow_studio/static/css/main.ab5053a3.css.map",
-    "main.619acea8.js.map": "/ashflow_studio/static/js/main.619acea8.js.map",
+    "main.119dd51d.js.map": "/ashflow_studio/static/js/main.119dd51d.js.map",
     "453.8f712af2.chunk.js.map": "/ashflow_studio/static/js/453.8f712af2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab5053a3.css",
-    "static/js/main.619acea8.js"
+    "static/js/main.119dd51d.js"
   ]
 }
