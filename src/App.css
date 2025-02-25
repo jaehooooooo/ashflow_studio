@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.unity-logo {
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.download-btn, .signin-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.download-btn {
+  background: #000;
+  color: white;
+}
+
+.signin-btn {
+  background: transparent;
+  border: 1px solid #000;
+}
+
+.hero-section {
+  background: linear-gradient(45deg, #2C2C2C, #1A1A1A);
+  color: white;
+  padding: 6rem 2rem;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #2196F3;
+  color: white;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+}
+
+/* 새로운 스타일 예시 */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  padding: 80px 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .App {
+    padding: 0 15px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+}
