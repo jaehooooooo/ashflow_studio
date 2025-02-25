@@ -1,19 +1,13 @@
 {
   "files": {
     "main.css": "/ashflow_studio/static/css/main.594562cb.css",
-    "main.js": "/ashflow_studio/static/js/main.bae518b2.js",
-    "static/media/video3.mp4": "/ashflow_studio/static/media/video3.14538c859e54761f68ef.mp4",
-    "static/media/video1.mp4": "/ashflow_studio/static/media/video1.349503c640d04fb62b9b.mp4",
-    "static/media/feature2.mp4": "/ashflow_studio/static/media/feature2.ef271c8e38bbee7cc3ce.mp4",
-    "static/media/feature3.mp4": "/ashflow_studio/static/media/feature3.4ade2e0aea7b62657e50.mp4",
-    "static/media/feature1.mp4": "/ashflow_studio/static/media/feature1.f17f7e2c1933db3f12c6.mp4",
-    "static/media/video2.mp4": "/ashflow_studio/static/media/video2.55700258bf70ebea61fa.mp4",
+    "main.js": "/ashflow_studio/static/js/main.2dd65f23.js",
     "index.html": "/ashflow_studio/index.html",
     "main.594562cb.css.map": "/ashflow_studio/static/css/main.594562cb.css.map",
-    "main.bae518b2.js.map": "/ashflow_studio/static/js/main.bae518b2.js.map"
+    "main.2dd65f23.js.map": "/ashflow_studio/static/js/main.2dd65f23.js.map"
   },
   "entrypoints": [
     "static/css/main.594562cb.css",
-    "static/js/main.bae518b2.js"
+    "static/js/main.2dd65f23.js"
   ]
 }
