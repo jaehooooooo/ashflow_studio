@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/ashflow_studio/static/css/main.ab5053a3.css",
-    "main.js": "/ashflow_studio/static/js/main.119dd51d.js",
-    "static/js/453.8f712af2.chunk.js": "/ashflow_studio/static/js/453.8f712af2.chunk.js",
-    "index.html": "/ashflow_studio/index.html",
-    "main.ab5053a3.css.map": "/ashflow_studio/static/css/main.ab5053a3.css.map",
-    "main.119dd51d.js.map": "/ashflow_studio/static/js/main.119dd51d.js.map",
-    "453.8f712af2.chunk.js.map": "/ashflow_studio/static/js/453.8f712af2.chunk.js.map"
+    "main.css": "/static/css/main.25faebee.css",
+    "main.js": "/static/js/main.5ab71037.js",
+    "index.html": "/index.html",
+    "main.25faebee.css.map": "/static/css/main.25faebee.css.map",
+    "main.5ab71037.js.map": "/static/js/main.5ab71037.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab5053a3.css",
-    "static/js/main.119dd51d.js"
+    "static/css/main.25faebee.css",
+    "static/js/main.5ab71037.js"
   ]
 }
