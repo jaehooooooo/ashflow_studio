@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ashflow_studio/static/css/main.594562cb.css",
-    "main.js": "/ashflow_studio/static/js/main.96ddc247.js",
+    "main.js": "/ashflow_studio/static/js/main.80bd9a68.js",
     "index.html": "/ashflow_studio/index.html",
     "main.594562cb.css.map": "/ashflow_studio/static/css/main.594562cb.css.map",
-    "main.96ddc247.js.map": "/ashflow_studio/static/js/main.96ddc247.js.map"
+    "main.80bd9a68.js.map": "/ashflow_studio/static/js/main.80bd9a68.js.map"
   },
   "entrypoints": [
     "static/css/main.594562cb.css",
-    "static/js/main.96ddc247.js"
+    "static/js/main.80bd9a68.js"
   ]
 }
