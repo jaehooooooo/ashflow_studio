@@ -75,6 +75,7 @@
   height: 100%;
   z-index: 0;
   background: #000;
+  overflow: hidden;
 }
 
 .hero-video {

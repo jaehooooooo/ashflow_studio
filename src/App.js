@@ -1,23 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './App.css';
 
 function App() {
+  const videoRef = useRef(null);
   const [currentVideo, setCurrentVideo] = useState(0);
   const [imageError, setImageError] = useState(false);
   
   const videos = [
-    'https://static.videezy.com/system/resources/previews/000/038/626/original/alb_game001_1080p.mp4',  // 게임 개발 영상
-    'https://static.videezy.com/system/resources/previews/000/004/381/original/Plexus.mp4',  // 3D 그래픽 영상
-    'https://static.videezy.com/system/resources/previews/000/051/927/original/Abstract_Loop_08.mp4'  // 추상적 3D 영상
+    'https://assets.mixkit.co/videos/preview/mixkit-virtual-reality-game-development-4930-large.mp4',  // 게임 개발 영상
+    'https://assets.mixkit.co/videos/preview/mixkit-futuristic-urban-landscape-at-night-4921-large.mp4',  // 도시 풍경
+    'https://assets.mixkit.co/videos/preview/mixkit-3d-animation-of-modern-city-at-night-42374-large.mp4'  // 3D 도시
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const videoElement = videoRef.current;
+    
+    const handleVideoEnd = () => {
       setCurrentVideo((prev) => (prev + 1) % videos.length);
-    }, 8000); // 8초마다 전환
+    };
 
-    return () => clearInterval(interval);
-  }, []);
+    if (videoElement) {
+      videoElement.addEventListener('ended', handleVideoEnd);
+      
+      // 비디오 로드 후 자동 재생
+      videoElement.load();
+      videoElement.play().catch(error => {
+        console.log("Video autoplay failed:", error);
+      });
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('ended', handleVideoEnd);
+      }
+    };
+  }, [currentVideo]);
 
   const handleImageError = (e) => {
     console.log('Image failed to load:', e.target.src);
@@ -53,6 +70,18 @@ function App() {
 
       <main>
         <section className="hero-section">
+          <div className="video-container">
+            <video
+              ref={videoRef}
+              className="hero-video"
+              muted
+              playsInline
+              loop
+              key={videos[currentVideo]}
+            >
+              <source src={videos[currentVideo]} type="video/mp4" />
+            </video>
+          </div>
           <div className="hero-content">
             <h1>실시간 콘텐츠를 위한 세계 최고의 플랫폼</h1>
             <p>게임, 자동차, 영화, 건축 등 실시간 3D 개발을 위한 선도적인 플랫폼으로 놀라운 경험을 만들어보세요.</p>
@@ -60,18 +89,6 @@ function App() {
               <button className="primary-btn">무료로 시작하기</button>
               <button className="secondary-btn">Unity 살펴보기</button>
             </div>
-          </div>
-          <div className="video-container">
-            <video
-              key={videos[currentVideo]}
-              className="hero-video"
-              autoPlay
-              muted
-              playsInline
-              onEnded={() => setCurrentVideo((prev) => (prev + 1) % videos.length)}
-            >
-              <source src={videos[currentVideo]} type="video/mp4" />
-            </video>
           </div>
         </section>
 
