@@ -32,12 +32,12 @@ export default function RootLayout({
         {/* 🔹 상단 고정 헤더 */}
         <header className="fixed top-0 left-0 w-full z-50 bg-black px-8 py-4 shadow-md">
           <nav className="flex space-x-10 text-sm font-medium">
-            <a href="#" className="text-white block">제품</a>
-            <a href="#" className="text-white block">솔루션</a>
-            <a href="#" className="text-white block">리소스</a>
-            <a href="#" className="text-white block">커뮤니티</a>
-            <a href="#" className="text-white block">레벨업 아카데미</a>
-            <a href="#" className="text-white block">문의하기</a>
+            <a href="#" className="text-white block">About me</a>
+            <a href="#" className="text-white block">Skills</a>
+            <a href="#" className="text-white block">Projects</a>
+            <a href="#" className="text-white block">Artworks</a>
+            <a href="#" className="text-white block">Career</a>
+            <a href="#" className="text-white block">Info</a>
           </nav>
         </header>
 
