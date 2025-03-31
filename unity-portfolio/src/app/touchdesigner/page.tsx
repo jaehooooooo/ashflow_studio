@@ -1,4 +1,4 @@
-import { projects } from '@/lib/projects';
+//import { projects } from '@/lib/projects';
 import Link from 'next/link';
 
 export default function TouchDesignerPage() {

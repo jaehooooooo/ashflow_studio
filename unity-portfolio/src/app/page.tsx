@@ -1,4 +1,4 @@
-import Image from "next/image";
+//import Image from "next/image";
 import Hero from "@/components/Hero";
 import InfoCard from "@/components/InfoCards"
 import FeatureCards from "@/components/FeatureCards";
