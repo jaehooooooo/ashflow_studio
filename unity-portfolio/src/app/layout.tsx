@@ -14,9 +14,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "최재호(Ash) Portfolio",
-  description: "Ash-Studio",
+  description: "인터랙티브 아트와 프로젝트를 확인해보세요.",
+  openGraph: {
+    title: "최재호(Ash) Portfolio",
+    description: "인터랙티브 아트와 프로젝트를 확인해보세요.",
+    url: "https://www.ashflow.info",
+    siteName: "Ashflow Studio",
+    images: [
+      {
+        url: "https://www.ashflow.info/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ashflow OG Image",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
