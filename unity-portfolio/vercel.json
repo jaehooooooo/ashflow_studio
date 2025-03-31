@@ -1,14 +1,14 @@
 {
     "redirects": [
       {
-        "source": "/(.*)",
+        "source": "/:match*",
         "has": [
           {
             "type": "host",
             "value": "ashflow.info"
           }
         ],
-        "destination": "https://www.ashflow.info/:1",
+        "destination": "https://www.ashflow.info/:match*",
         "statusCode": 308
       }
     ]
