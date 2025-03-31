@@ -11,7 +11,7 @@ const videoSources = [
 export default function Hero() {
   const [index, setIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const featureRef = useRef<HTMLDivElement>(null); // ⭐ FeatureCards로 이동하기 위한 ref
+  const featureRef = useRef<HTMLDivElement>(null);
 
   const handleVideoEnd = () => {
     setIndex((prev) => (prev + 1) % videoSources.length);
@@ -32,16 +32,17 @@ export default function Hero() {
 
   const scrollToFeature = () => {
     if (featureRef.current) {
-        window.scrollTo({
-            top: featureRef.current.offsetTop - 100, // ← 원하는 만큼 위로 띄우기 (80px 정도)
-            behavior: 'smooth',
-          });    }
+      window.scrollTo({
+        top: featureRef.current.offsetTop - 100,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
     <>
       <section className="relative w-full h-screen text-white overflow-hidden">
-        {/* 🎬 비디오 배경 */}
+        {/* 🎬 배경 비디오 */}
         <video
           ref={videoRef}
           key={index}
@@ -71,57 +72,9 @@ export default function Hero() {
             MORE
           </button>
         </div>
-
-        {/* 📊 하단 통계 정보 */}
-        <div className="absolute bottom-28 md:bottom-32 z-20 w-full flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 px-4">
-          {[
-            {
-              value: 'Info',
-              label: (
-                <>
-                  최재호<br />
-                  1996.06.27<br />
-                  010-5358-6951<br />
-                  funjh002@gmail.com
-                </>
-              ),
-              className: 'w-60 h-40',
-            },
-            {
-              value: 'Career',
-              label: (
-                <>
-                  Plinqer : 포토이즘 솔루션 개발, 전시 개발<br />
-                  DoubleMe : VR 전시 개발, VR 게임 개발<br />
-                  단국대학교 : 패션 산업디자인과 학사 졸업
-                </>
-              ),
-              className: 'w-80 h-40',
-            },
-            {
-              value: 'Skill',
-              label: (
-                <>
-                  Language : C#, C, C++<br />
-                  Develop Tools : Unity, TouchDesinger, Unreal<br />
-                  Art Tools : AfterEffect, Cinema 4D, Adobe Programs
-                </>
-              ),
-              className: 'w-96 h-40',
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className={`${item.className} bg-black/60 text-white rounded-lg px-6 py-4 text-sm text-left flex flex-col justify-start leading-relaxed`}
-            >
-              <h3 className="text-lg font-semibold mb-2">{item.value}</h3>
-              <div>{item.label}</div>
-            </div>
-          ))}
-        </div>
       </section>
 
-      {/* 🔽 FeatureCards가 스크롤될 위치 지정용 */}
+      {/* 스크롤 이동용 reference */}
       <div ref={featureRef} />
     </>
   );

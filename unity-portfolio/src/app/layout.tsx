@@ -30,16 +30,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`} // 🔹 헤더 높이만큼 padding-top 추가
       >
         {/* 🔹 상단 고정 헤더 */}
-        <header className="fixed top-0 left-0 w-full z-50 bg-black px-8 py-4 shadow-md">
-          <nav className="flex space-x-10 text-sm font-medium">
-            <a href="#" className="text-white block">About me</a>
-            <a href="#" className="text-white block">Skills</a>
-            <a href="#" className="text-white block">Projects</a>
-            <a href="#" className="text-white block">Artworks</a>
-            <a href="#" className="text-white block">Career</a>
-            <a href="#" className="text-white block">Info</a>
-          </nav>
-        </header>
+        <header className="fixed top-0 left-0 w-full z-50 bg-black px-4 py-3 shadow-md">
+  <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-white">
+    <a href="#" className="block">About me</a>
+    <a href="#" className="block">Skills</a>
+    <a href="#" className="block">Projects</a>
+    <a href="#" className="block">Artworks</a>
+    <a href="#" className="block">Career</a>
+    <a href="#" className="block">Info</a>
+  </nav>
+</header>
 
         {/* 🔹 메인 콘텐츠 */}
         {children}
