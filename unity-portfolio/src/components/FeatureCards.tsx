@@ -1,20 +1,25 @@
-﻿"use client";
+﻿'use client';
+
+import Link from 'next/link';
 
 const features = [
   {
     title: "Unity",
     desc: `Unity 및 C#을 활용하여 VR (META / VisionPro / Hololens2) 게임 및 전시를 제작하였으며, Unity Shader 및 다양한 Interactive Device를 통한 Interactive Art를 제작하였습니다.`,
     video: "/videos/card-1.mp4",
+    link: "/unity",
   },
   {
     title: "Touch Designer - Unreal - AfterEffect",
     desc: `Touch Designer 및 Unreal, AfterEffect 등 다양한 툴과 Interactive Device를 활용하여 Interactive Art를 제작하였습니다.`,
     video: "/videos/card-2.mp4",
+    link: "/touchdesigner",
   },
   {
     title: "Design",
     desc: `패션 산업 디자인과를 전공하여 패션쇼를 개최하였고, 다양한 3D Tool과 3D Printer를 활용하여 Artwork를 제작하였습니다.`,
     video: "/videos/card-3.mp4",
+    link: "/design",
   },
 ];
 
@@ -46,16 +51,16 @@ export default function FeatureCards() {
             {/* 텍스트 */}
             <div className="px-5 py-3 flex flex-col h-full">
               <div className="flex-grow">
-              <h3 className="text-xl md:text-xl font-bold mb-6">{item.title}</h3>
-              <p className="text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-xl md:text-xl font-bold mb-6">{item.title}</h3>
+                <p className="text-sm leading-relaxed">{item.desc}</p>
               </div>
 
-              <a
-                href="#"
+              <Link
+                href={item.link}
                 className="mt-4 self-end border border-white text-white hover:bg-white hover:text-black transition px-4 py-2 rounded-full text-sm"
               >
                 MORE <span className="ml-2">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         ))}
