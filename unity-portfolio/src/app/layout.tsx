@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Unity Portfolio",
+  title: "최재호(Ash) Portfolio",
   description: "Ash-Studio",
 };
 
