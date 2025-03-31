@@ -4,6 +4,14 @@ import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+type ProjectItem = {
+  title: string;
+  date: string;
+  tags: string[];
+  image: string;
+  link: string;
+};
+
 const images = [
   '/images/success-1.jpg',
   '/images/success-2.jpg',
@@ -17,7 +25,7 @@ const images = [
 ];
 
 // 공통 카드 컴포넌트
-function ProjectCard({ item }: { item: any }) {
+function ProjectCard({ item }: { item: ProjectItem }) {
   const isExternal = item.link.startsWith('http');
 
   const content = (
@@ -29,7 +37,7 @@ function ProjectCard({ item }: { item: any }) {
       />
       <div className="absolute inset-0 bg-black/40 flex flex-col justify-between p-4">
         <div className="flex flex-wrap gap-2 text-xs font-semibold text-white">
-          {item.tags.map((tag: string, i: number) => (
+          {item.tags.map((tag, i) => (
             <span key={i} className="bg-white/20 px-2 py-0.5 rounded-full">
               {tag}
             </span>
@@ -121,7 +129,7 @@ export default function SuccessGrid() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const projectItems = [
+  const projectItems: ProjectItem[] = [
     {
       title: '해롤드 할리벗의 수중 세계를 조명하다',
       date: '2024-07-25',
@@ -136,44 +144,10 @@ export default function SuccessGrid() {
       image: '/images/project-2.jpg',
       link: '/project/2',
     },
-    {
-      title: '해롤드 할리벗의 수중 세계를 조명하다',
-      date: '2024-07-25',
-      tags: ['CASE STUDIES', 'Game Creation', 'Platforms', '+2'],
-      image: '/images/project-1.jpg',
-      link: '/project/1',
-    },
-    {
-      title: '아우디가 애플 비전 프로에서 Q6 e-트론의 몰입형 환경을 구축한 방법',
-      date: '2024-07-03',
-      tags: ['CASE STUDIES', 'Industry', '+1'],
-      image: '/images/project-2.jpg',
-      link: '/project/2',
-    },
-    {
-      title: '해롤드 할리벗의 수중 세계를 조명하다',
-      date: '2024-07-25',
-      tags: ['CASE STUDIES', 'Game Creation', 'Platforms', '+2'],
-      image: '/images/project-1.jpg',
-      link: '/project/1',
-    },
-    {
-      title: '아우디가 애플 비전 프로에서 Q6 e-트론의 몰입형 환경을 구축한 방법',
-      date: '2024-07-03',
-      tags: ['CASE STUDIES', 'Industry', '+1'],
-      image: '/images/project-2.jpg',
-      link: '/project/2',
-    },
-    {
-      title: '아우디가 애플 비전 프로에서 Q6 e-트론의 몰입형 환경을 구축한 방법',
-      date: '2024-07-03',
-      tags: ['CASE STUDIES', 'Industry', '+1'],
-      image: '/images/project-2.jpg',
-      link: '/project/2',
-    },
+    // 추가 항목 생략
   ];
 
-  const artworkItems = [
+  const artworkItems: ProjectItem[] = [
     {
       title: '감정 진단 제작소',
       date: '2024-06-01',
@@ -189,7 +163,7 @@ export default function SuccessGrid() {
       link: '/project/2',
     },
     // ... 더 많은 artwork 항목
-  ]
+  ];
 
   return (
     <section className="relative bg-black text-white">
@@ -245,22 +219,22 @@ export default function SuccessGrid() {
 
       {/* Projects 섹션 */}
       <div className="relative z-0 bg-black text-white py-32 px-6">
-      <h2 className="text-4xl font-bold text-center mb-16">Projects</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-  {projectItems.map((item, i) => (
-    <ProjectCard key={i} item={item} />
-  ))}
-</div>
+        <h2 className="text-4xl font-bold text-center mb-16">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {projectItems.map((item, i) => (
+            <ProjectCard key={i} item={item} />
+          ))}
+        </div>
       </div>
 
       {/* Artwork 섹션 */}
       <div className="relative z-0 bg-white text-black py-32 px-6">
-      <h2 className="text-4xl font-bold text-center mb-16">Artwork</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-  {artworkItems.map((item, i) => (
-    <ProjectCard key={i} item={item} />
-  ))}
-</div>
+        <h2 className="text-4xl font-bold text-center mb-16">Artwork</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {artworkItems.map((item, i) => (
+            <ProjectCard key={i} item={item} />
+          ))}
+        </div>
       </div>
 
       <div className="h-[10vh]" />
