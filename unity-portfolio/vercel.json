@@ -1,0 +1,15 @@
+{
+    "redirects": [
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "ashflow.info"
+                }
+            ],
+            "destination": "https://www.ashflow.info",
+            "statusCode": 308
+        }
+    ]
+}
