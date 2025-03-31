@@ -1,15 +1,8 @@
 import { notFound } from 'next/navigation';
-import { projects } from '@/lib/projects'; // 🔹 데이터 import
+import { projects } from '@/lib/projects';
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
-
-export default function ProjectDetailPage({ params }: PageProps) {
-  const { id } = params;
-  const project = projects.find((p) => p.id === id); // ✅ 여기 수정
+export default function ProjectDetailPage({ params }: { params: { id: string } }) {
+  const project = projects.find((p) => p.id === params.id);
 
   if (!project) return notFound();
 
