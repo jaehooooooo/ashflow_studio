@@ -9,7 +9,7 @@ type PageProps = {
 
 export default function ProjectDetailPage({ params }: PageProps) {
   const { id } = params;
-  const project = projects.find((p) => p.id === params.id);
+  const project = projects.find((p) => p.id === id); // ✅ 여기 수정
 
   if (!project) return notFound();
 
