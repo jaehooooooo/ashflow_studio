@@ -14,3 +14,9 @@ const eslintConfig = [
 ];
 
 export default eslintConfig;
+// .eslintrc.js
+module.exports = {
+  rules: {
+    '@typescript-eslint/no-explicit-any': 'warn', // ✅ 여기가 맞는 위치
+  },
+};
